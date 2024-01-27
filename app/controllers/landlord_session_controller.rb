@@ -7,7 +7,7 @@ class LandlordSessionController < ApplicationController
       session[:landlord_id] = landlord.id
       render json: { landlord: authorize_landlord }, status: :ok
     else
-      render json: { errors: ["Invalid email or password"] }, status: :unathorized
+      render json: { errors: ["Invalid email or password"] }, status: :unprocessable_entity
     end
   end
 
