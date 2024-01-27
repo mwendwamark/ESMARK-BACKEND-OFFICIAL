@@ -9,7 +9,7 @@ class LandlordsController < ApplicationController
   end
 
   def show
-    render json: { landlord: authorize_landlord }, except: [:created_at, :updated_at], status: :ok
+    render json: { landlord: authorize_landlord }, except: [:created_at, :updated_at, :reset_sent_at, :reset_token], status: :ok
   end
 
   def create

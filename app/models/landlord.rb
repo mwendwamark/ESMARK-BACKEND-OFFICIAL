@@ -12,11 +12,4 @@ class Landlord < ApplicationRecord
 
   validates_format_of :company_email, with: URI::MailTo::EMAIL_REGEXP
   validates_format_of :company_email, with: /\Aesmark04@gmail\.com\z/i, message: "must be the correct company email"
-
-  #   validate :email_must_be_landlords
-  #   def email_must_be_landlords
-  #     unless company_email.match?(/esmark04@gmail.com/)
-  #       errors.add(:company_email, "provide the correct company email")
-  #     end
-  #   end
 end
